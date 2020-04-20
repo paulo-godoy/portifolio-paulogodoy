@@ -4,725 +4,326 @@
 
 /*--fundo preto--*/
 
-.contrast,
-
-.contrast nav,
-
-.contrast div,
-
-.contrast li,
-
-.contrast ol,
-
-.contrast header,
-
-.contrast footer,
-
-.contrast section,
-
-.contrast main,
-
-.contrast aside,
-
-.contrast article {
-
+.contrast, .contrast nav, .contrast div, .contrast li, .contrast ol, .contrast header, .contrast footer, .contrast section, .contrast main, .contrast aside, .contrast article {
     background: black !important;
-
     color: white !important;
-
 }
-
-
 
 /*--Texto branco--*/
 
-.contrast h1,
-
-.contrast h2,
-
-.contrast h3,
-
-.contrast h4,
-
-.contrast h5,
-
-.contrast h6,
-
-.contrast p,
-
-.contrast label,
-
-.contrast strong,
-
-.contrast em,
-
-.contrast cite,
-
-.contrast q,
-
-.contrast i,
-
-.contrast b,
-
-.contrast u,
-
-.contrast span {
-
+.contrast h1, .contrast h2, .contrast h3, .contrast h4, .contrast h5, .contrast h6, .contrast p, .contrast label, .contrast strong, .contrast em, .contrast cite, .contrast q, .contrast i, .contrast b, .contrast u, .contrast span {
     color: white !important;
-
 }
-
-
 
 /*--Liks--*/
 
-.contrast a{
-
+.contrast a {
     color: yellow !important;
-
-
-
 }
 
-
-
-.contrast a:hover{
-
+.contrast a:hover {
     color: #fff !important;
-
-    
-
 }
 
-
-
-.contrast button,
-
-.contrast input[type=button],
-
-.contrast input[type=reset],
-
-.contrast input[type=submit] {
-
+.contrast button, .contrast input[type=button], .contrast input[type=reset], .contrast input[type=submit] {
     background: black !important;
-
     color: yellow !important;
-
     border: none !important;
-
 }
-
-
 
 /*---Imagem---*/
 
 .contrast img.on-contrast-force-gray {
-
     filter: grayscale(100%) contrast(120%);
-
 }
-
-
 
 .contrast img.on-contrast-force-white {
-
     filter: brightness(0) invert(1);
-
 }
-
-
 
 /*--campos e formularios--*/
 
-.contrast input[type=text],
-
-.contrast input[type=password],
-
-.contrast input[type=url],
-
-.contrast input[type=search],
-
-.contrast input[type=email],
-
-.contrast input[type=tel],
-
-.contrast input[type=date],
-
-.contrast input[type=month],
-
-.contrast input[type=week],
-
-.contrast input[type=datetime],
-
-.contrast input[type=datetime-local],
-
-.contrast textarea,
-
-.contrast input[type=number] {
-
+.contrast input[type=text], .contrast input[type=password], .contrast input[type=url], .contrast input[type=search], .contrast input[type=email], .contrast input[type=tel], .contrast input[type=date], .contrast input[type=month], .contrast input[type=week], .contrast input[type=datetime], .contrast input[type=datetime-local], .contrast textarea, .contrast input[type=number] {
     background: black !important;
-
     border: 1px solid white !important;
-
     color: white !important;
-
 }
-
-
-
-
 
 /*---Final contraste
 
 ---*/
-
-
 
 /*----Layout
 
 ---------- */
 
 html, body, #home {
-
     height: 100%;
-
     overflow-x: hidden;
-
 }
 
 body {
-
-    background:#ffa500;
-
+    /* background:#ffa500; */
+    background: #2974F2;
     background-attachment: fixed;
-
     font-family: Helvetica, Arial, sans-serif;
-
 }
-
-
-
-
-
-
 
 /*---Barra de navegação
 
 ---*/
 
-
-
 nav.navbar-transparente {
-
     padding: 15px 0;
-
-    background: rgba(128,128,128,0.1);
-
+    background: rgba(128, 128, 128, 0.1);
 }
-
-
 
 .navbar-light .navbar-nav .nav-link {
-
     color: #ffffff;
-
 }
-
-
 
 .navbar-light .navbar-nav .nav-link:hover {
-
     color: #212529;
-
 }
-
-
 
 .navbar-light .navbar-toggler {
-
-    color: rgba(255,255,255,.5);
-
-    border-color: rgba(255,255,255,0.4);
-
+    color: rgba(255, 255, 255, .5);
+    border-color: rgba(255, 255, 255, 0.4);
 }
-
-
 
 .divisor {
-
     width: 1px;
-
     background: white;
-
     margin: 12px 15px;
-
 }
-
-
 
 /*-- capa
 
 --*/
 
-
-
-
-
 .capa {
-
     text-align: center;
-
-	margin-top:57px;
-
+    margin-top: -60px !important;
 }
-
-
 
 .carousel-control-next, .carousel-control-prev {
-
     width: 5%;
-
 }
-
-
 
 .circle-img {
-
-  background-color: #fff;
-
-  border-radius: 50%;
-
-  width: 170px;
-
-  height: 170px;
-
-  overflow: hidden;
-
-  position: relative;
-
-  border: 4px solid #fff;
-
-  -webkit-box-shadow: 3px 1px 50px #212529;
-
-          box-shadow: 3px 1px 50px #212529;
-
+    background-color: #fff;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid #fff;
+    -webkit-box-shadow: 3px 1px 50px #212529;
+    box-shadow: 3px 1px 50px #212529;
 }
-
-
-
-
 
 .circle-img-logo {
-
-  background-color: #fff;
-
-  border-radius: 50%;
-
-  width: 70px;
-
-  height: 70px;
-
-  overflow: hidden;
-
-  position: relative;
-
-  border: 3px solid #fff;
-
-  -webkit-box-shadow: 3px 1px 50px #212529;
-
-          box-shadow: 3px 1px 50px #212529;
-
+    background-color: #fff;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid #fff;
+    -webkit-box-shadow: 3px 1px 50px #212529;
+    box-shadow: 3px 1px 50px #212529;
 }
-
-
 
 /*---Estrutura de conteudos
 
 ------------*/
 
-
-
 #sobre {
-
     background: #ffffff;
-
     padding-top: 30px;
-
     padding-bottom: 30px;
-
 }
-
-
 
 #sobre-contato {
-
     background: #ffffff;
-
     padding-top: 35px;
-
     padding-bottom: 20px;
-
-	width: 100%;
-
+    width: 100%;
 }
-
-
 
 #projetos {
-
     background: #ffffff;
-
     padding-top: 30px;
-
     padding-bottom: 30px;
-
 }
-
-
 
 #projetos h2, h3 {
-
     color: #808080;
-
-    text-align:justify;
-
+    text-align: justify;
 }
-
-
 
 section#projetos img {
-
-    margin-top:30px;
-
-    margin-bottom:40px;
-
+    margin-top: 30px;
+    margin-bottom: 40px;
     text-align: center;
-
-    
-
 }
-
-
 
 section#projetos p {
-
-    margin-top:0px auto;
-
-    margin-bottom:20px;
-
+    margin-top: 0px auto;
+    margin-bottom: 20px;
     text-align: justify;
-
-    
-
 }
-
-
 
 #formacao {
-
     padding-top: 30px;
-
     padding-bottom: 30px;
-
 }
-
-
 
 #sobre h2, h3 {
-
     color: #808080;
-
-	text-align:justify;
-
+    text-align: justify;
 }
-
-
 
 #formacao h2 {
-
     color: #ffffff;
-
 }
-
-
 
 #formacao {
-
     color: #ffffff;
-
 }
-
-
 
 #formacao h3 {
-
     color: #9bf0e1;
-
 }
-
-
 
 section#formacao img {
-
-	margin-top:30px;
-
-	margin-bottom:40px;
-
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
-
-
 
 section#formacao p {
-
-    margin-top:0px auto;
-
-    margin-bottom:20px;
-
+    margin-top: 0px auto;
+    margin-bottom: 20px;
     text-align: justify;
-
-    
-
 }
-
-
 
 IMG.displayed {
-
     display: block;
-
     margin-left: auto;
-
     margin-right: auto
-
 }
-
-
 
 /*-----Rodapé
 
 ---------*/
 
-
-
 .fa, .fas {
-
     color: #fff;
-
 }
-
-
 
 footer {
-
-    background: rgba(128,128,128,0.1);
-
+    background: rgba(128, 128, 128, 0.1);
     padding: 50px 0px 20px 0px;
-
     position: relative;
-
 }
-
-
 
 footer h4 {
-
     color: #fff;
-
     font-size: 0.8em;
-
     text-transform: uppercase;
-
 }
-
-
 
 footer .navbar-nav a {
-
     color: white;
-
     font-size: 0.8em;
-
 }
-
-
 
 footer .navbar-nav a:hover {
-
     color: red;
-
     text-decoration: none;
-
 }
-
-
 
 footer ul {
-
     list-style: none;
-
     display: flex;
-
     padding: 0 5px;
-
 }
-
-
 
 footer ul li {
-
     margin-top: 10px;
-
     color: #919496;
-
 }
-
-
 
 /*curriculo
 
 -------*/
 
 .fundo-branco {
-
     background: #fff;
-
 }
-
-
 
 /*-- Tipografia
 
 ----- */
 
 h1 {
-
     font-weight: 900;
-
     letter-spacing: -0.05em;
-
     margin-bottom: 25px;
-
     color: #ffffff;
-
 }
-
-
 
 h2 {
-
-   font-size: 2em;
-
-   font-weight: 700;
-
-   letter-spacing: -0.04em;
-
-   margin-bottom:20px;
-
-   color:#fff;
-
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin-bottom: 20px;
+    color: #fff;
 }
-
-
 
 h3 {
-
     font-size: 2em;
-
     font-weight: 700;
-
     letter-spacing: -0.04em;
-
 }
-
-
 
 /* Extra small devices (portrait phones, less than 576px)*/
 
-@media (max-width: 575.98px) {
-
-    
-
-}
-
-
+@media (max-width: 575.98px) {}
 
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-
     h1 {
-
         font-size: 2em;
-
     }
-
-
-
-    
-
 }
-
-
 
 /* Medium devices (tablets, 768px and up)  */
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-
     h1 {
-
         font-size: 2em;
-
     }
-
-
-
-    
-
 }
-
-
 
 /* Large devices (desktops, 992px and up)  */
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-
     h1 {
-
         font-size: 3em;
-
     }
-
-
-
-    
-
 }
-
-
 
 /* Extra large devices (large desktops, 1200px and up)  */
 
 @media (min-width: 1200px) {
-
     h1 {
-
         font-size: 4em;
-
     }
-
-
-
-    
-
 }
-
-
 
 .img {
-
     width: 950px;
-
     height: 300px;
-
 }
-
