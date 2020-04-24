@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <!-- Estilo costomizado -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -23,62 +26,65 @@
     <title>Paulo Godoy</title>
     <link rel="icon" href="imagens/favicon.png">
     <script type="text/javascript">
-        function acaoCurriculo(){
-            alert('Clique no link para acessar ou baixar meu currículo.')
-        }
+       // function acaoCurriculo() {
+       //    Swal.fire('Clique no link para acessar ou baixar meu currículo.')
+       // }
 
-       //
-       (function () {
+        //
+        (function () {
             var Contrast = {
-            storage: 'contrastState',
-            cssClass: 'contrast',
-            currentState: null,
-            check: checkContrast,
-            getState: getContrastState,
-            setState: setContrastState,
-            toogle: toogleContrast,
-            updateView: updateViewContrast
-        };
+                storage: 'contrastState',
+                cssClass: 'contrast',
+                currentState: null,
+                check: checkContrast,
+                getState: getContrastState,
+                setState: setContrastState,
+                toogle: toogleContrast,
+                updateView: updateViewContrast
+            };
 
-    window.toggleContrast = function () { Contrast.toogle(); };
+            window.toggleContrast = function () { Contrast.toogle(); };
 
-    Contrast.check();
+            Contrast.check();
 
-    function checkContrast() {
-        this.updateView();
-    }
+            function checkContrast() {
+                this.updateView();
+            }
 
-    function getContrastState() {
-        return localStorage.getItem(this.storage) === 'true';
-    }
+            function getContrastState() {
+                return localStorage.getItem(this.storage) === 'true';
+            }
 
-    function setContrastState(state) {
-        localStorage.setItem(this.storage, '' + state);
-        this.currentState = state;
-        this.updateView();
-    }
+            function setContrastState(state) {
+                localStorage.setItem(this.storage, '' + state);
+                this.currentState = state;
+                this.updateView();
+            }
 
-    function updateViewContrast() {
-        var body = document.body;
+            function updateViewContrast() {
+                var body = document.body;
 
-        if (this.currentState === null)
-            this.currentState = this.getState();
+                if (this.currentState === null)
+                    this.currentState = this.getState();
 
-        if (this.currentState)
-            body.classList.add(this.cssClass);
-        else
-            body.classList.remove(this.cssClass);
-    }
+                if (this.currentState)
+                    body.classList.add(this.cssClass);
+                else
+                    body.classList.remove(this.cssClass);
+            }
 
-    function toogleContrast() {
-        this.setState(!this.currentState);
-    }
-})();
+            function toogleContrast() {
+                this.setState(!this.currentState);
+            }
+        })();
        //
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
+
 <body>
-    <header><!-- Inicio cabecalho -->
+    <header>
+        <!-- Inicio cabecalho -->
         <nav class="navbar navbar-expand-md navbar-light navbar-transparente">
             <div class="container">
                 <!-- <a class="navbar-brand" href="index.html">
@@ -91,11 +97,16 @@
 
                 <div class="collapse navbar-collapse" id="nav-principal">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link btn btn-outline-light" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Alto contraste <i class="fas fa-adjust"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#altocontraste"
+                                id="altocontraste" accesskey="3" onclick="window.toggleContrast()"
+                                onkeydown="window.toggleContrast()">Alto contraste <i class="fas fa-adjust"></i></a>
+                        </li>
                         <li class="nav-item divisor"></li>
-                        <li class="nav-item"><a class="nav-link btn btn-outline-light" href="contato.php" target="_blank">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.php"
+                                target="_blank">Contato</a></li>
                         <li class="nav-item divisor"></li>
-                        <li class="nav-item"><a onmouseout="acaoCurriculo()" class="nav-link btn btn-outline-light" href="curriculo/Curriculum-Vitae-Paulo.pdf" target="_blank">Currículo</a></li>
+                        <li class="nav-item"><a onmouseout="acaoCurriculo()" class="nav-link"
+                                href="curriculo/Curriculum-Vitae-Paulo.pdf" target="_blank">Currículo</a></li>
                     </ul>
                 </div>
 
@@ -103,183 +114,228 @@
         </nav>
 
     </header><!-- Fim cabecalho -->
-    <section class="d-flex" id="home"><!-- Inicio home -->
-        <div class="container align-self-center"><!-- Inicio container -->
-            <div class="row"><!-- Inicio row -->
+    <section class="d-flex" id="home">
+        <!-- Inicio home -->
+        <div class="container align-self-center">
+            <!-- Inicio container -->
+            <div class="row">
+                <!-- Inicio row -->
                 <div class="col-md-12 capa">
-                    
-                          	<img class="img-fluid circle-img" src="imagens/perfil.jpeg" width="100%" height="auto" alt="Foto do Perfil">
-                              <h1><b>PAULO GODOY</b></h1>
-                              <h2>Desenvolvedor de Sistemas Web</h2>
-                            
-                              <p>
-                        		<a class="btn btn-outline-light" href="https://www.facebook.com/paulo.godoy.948" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
-                                <a class="btn btn-outline-light ml-3" href="https://www.linkedin.com/in/paulo-ricardo-p-godoy-06577333" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
-                                <a class="btn btn-outline-light ml-3" href="https://www.instagram.com/paulogodoy948" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
-                        		<a class="btn btn-outline-light ml-3" href="https://github.com/paulo-godoy?tab=repositories" target="_blank"><i class="fab fa-github-square fa-lg"></i></a>
-                                <a class="btn btn-outline-light ml-3" href="https://wa.me/5551985862294?" target="_blank" title="Me chame pelo WhatsApp."><i class="fab fa-whatsapp-square fa-lg"></i></a>
-                              </p>
-                          </div>
+
+                    <img class="img-fluid circle-img" src="imagens/perfil.jpeg" width="100%" height="auto"
+                        alt="Foto do Perfil">
+                    <h1><b>PAULO GODOY</b></h1>
+                    <h2>Desenvolvedor de Sistemas Web</h2>
+
+                    <p>
+                        <a class="btn btn-outline-light" href="https://www.facebook.com/paulo.godoy.948"
+                            target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-outline-light ml-3"
+                            href="https://www.linkedin.com/in/paulo-ricardo-p-godoy-06577333" target="_blank"><i
+                                class="fab fa-linkedin fa-lg"></i></a>
+                        <a class="btn btn-outline-light ml-3" href="https://www.instagram.com/paulogodoy948"
+                            target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a class="btn btn-outline-light ml-3" href="https://github.com/paulo-godoy?tab=repositories"
+                            target="_blank"><i class="fab fa-github-square fa-lg"></i></a>
+                        <a class="btn btn-outline-light ml-3" href="https://wa.me/5551985862294?" target="_blank"
+                            title="Me chame pelo WhatsApp."><i class="fab fa-whatsapp-square fa-lg"></i></a>
+                    </p>
                 </div>
-            </div><!-- Fim row -->
+            </div>
+        </div><!-- Fim row -->
 
         </div><!-- Fim container -->
     </section><!-- Fim home -->
 
-    <section id="sobre"><!-- Inicio seçao sobre -->
-        <div class="container"><!-- Inicio container -->
-            <div class="row"><!-- Inicio row -->
+    <section id="sobre">
+        <!-- Inicio seçao sobre -->
+        <div class="container">
+            <!-- Inicio container -->
+            <div class="row">
+                <!-- Inicio row -->
                 <div class="col-md-6">
-                   
+
                     <h2><b>Um pouco sobre mim!</b></h2>
                     <hr style="border:1px solid #ccc">
-                        <p>
-                            Sou o pai do Murilo e tenho 38 anos, possuo experiência de 10 anos com infraestrutura, estudo Análise e Desenvolvimento de sistemas no SENAC e estou procurando uma oportunidade para me desenvolver como programador Web.
-                        </p>
-                        <p>
-                            Meus hobbys são: levar meu filho na praça aos finais de semana e assistir filmes, series com minha esposa.
-                        </p>
-                        <p>
-                            Sou apaixonado por programação Web e afins das tecnologias.
-                        </p>
+                    <p>
+                        Sou o pai do Murilo e tenho 38 anos, possuo experiência de 10 anos com infraestrutura, estudo
+                        Análise e Desenvolvimento de sistemas no SENAC e estou procurando uma oportunidade para me
+                        desenvolver como programador Web.
+                    </p>
+                    <p>
+                        Meus hobbys são: levar meu filho na praça aos finais de semana e assistir filmes, series com
+                        minha esposa.
+                    </p>
+                    <p>
+                        Sou apaixonado por programação Web e afins das tecnologias.
+                    </p>
                 </div>
 
                 <div class="col-md-6">
-                   <img class="img-fluid" src="imagens/ora-sql-plsql.jpg" width="100%">
+                    <img class="img-fluid" src="imagens/ora-sql-plsql.jpg" width="100%">
                 </div>
 
             </div><!-- Fim row -->
         </div><!-- Fim container -->
     </section><!-- Fim seção sobre -->
 
-    <section id="formacao"><!-- secao Formacao -->
-        <div class="container"><!--container-->
-        	<h2 style="text-align:center;"><b>Formação</b></h2>
+    <section id="formacao">
+        <!-- secao Formacao -->
+        <div class="container">
+            <!--container-->
+            <h2 style="text-align:center;"><b>Formação</b></h2>
             <hr style="border:1px solid #fff">
-            <div class="row"><!--row-->
+            <div class="row">
+                <!--row-->
                 <div class="col-md-4">
                     <img class="img-fluid displayed" src="imagens/senac-logo.png" width="40%">
                     <p>
-                        Ingessei na Faculdade SENAC, em 2016/2 e estou gostando muito do curso que escolhi, a cada semestre que passa estou aprendendo muito sebre as tecnologias ensinadas em aula.
+                        Ingessei na Faculdade SENAC, em 2016/2 e estou gostando muito do curso que escolhi, a cada
+                        semestre que passa estou aprendendo muito sebre as tecnologias ensinadas em aula.
                     </p>
-				</div>
-                
-                 <div class="col-md-4">
-                     <img class="img-fluid displayed" src="imagens/alcides-maya.png" width="50%">
+                </div>
+
+                <div class="col-md-4">
+                    <img class="img-fluid displayed" src="imagens/alcides-maya.png" width="50%">
                     <p>
-                        Realizei o curso Técnico de Informatica na Escola Alcides Maya, no periodo de 2004 a 2006 aprendi muita coisa, foi lá que comecei a gostar de tecnologia. 
+                        Realizei o curso Técnico de Informatica na Escola Alcides Maya, no periodo de 2004 a 2006
+                        aprendi muita coisa, foi lá que comecei a gostar de tecnologia.
                     </p>
-				</div>
-                
-                 <div class="col-md-4">
+                </div>
+
+                <div class="col-md-4">
                     <img class="img-fluid displayed" src="imagens/logo-udemy.png" width="50%">
                     <p>
                         Curso completo de ORACLE SQL/PLSQL.
                     </p>
-                    <a href="certificados/ora-sql-plsql.pdf" class="btn btn-outline-light btn-block" target="_blank">CERTIFICADO</a>
-				</div>
-            </div><!--/row-->
+                    <a href="certificados/ora-sql-plsql.pdf" class="btn btn-outline-light btn-block"
+                        target="_blank">CERTIFICADO</a>
+                </div>
+            </div>
+            <!--/row-->
 
-            <div class="row"><!--row-->
+            <div class="row">
+                <!--row-->
                 <div class="col-md-4">
                     <img class="img-fluid displayed" src="imagens/curso-video.png" width="50%">
                     <p>
                         Curso de HTML5 e CSS3.
                     </p>
-                    <a href="certificados/html5-curso-video.pdf" class="btn btn-outline-light btn-block" target="_blank">CERTIFICADO</a>
+                    <a href="certificados/html5-curso-video.pdf" class="btn btn-outline-light btn-block"
+                        target="_blank">CERTIFICADO</a>
                 </div>
-                
-                 <div class="col-md-4">
-                     <img class="img-fluid displayed" src="imagens/target-trust.png" width="50%">
+
+                <div class="col-md-4">
+                    <img class="img-fluid displayed" src="imagens/target-trust.png" width="50%">
                     <p>
                         Curso Business Intelligence (BI) - Data Warehouse e ETL.
                     </p>
-                    <a href="certificados/cert-bi.pdf" class="btn btn-outline-light btn-block" target="_blank">CERTIFICADO</a>
+                    <a href="certificados/cert-bi.pdf" class="btn btn-outline-light btn-block"
+                        target="_blank">CERTIFICADO</a>
                 </div>
-                
-                 <div class="col-md-4">
+
+                <div class="col-md-4">
                     <img class="img-fluid displayed" src="imagens/logo-udemy.png" width="50%">
                     <p>
                         curso Desenvolvimento Web Completo 2019 - 17 cursos + 20 projetos.
                     </p>
                     <a href="" class="btn btn-outline-light btn-block disabled">CERTIFICADO</a>
                 </div>
-            </div><!--/row-->
-        </div><!--/container-->
+            </div>
+            <!--/row-->
+        </div>
+        <!--/container-->
 
     </section><!-- fim secao formacao -->
 
-    <section id="projetos"><!-- secao projetos -->
-        <div class="container"><!--container-->
+    <section id="projetos">
+        <!-- secao projetos -->
+        <div class="container">
+            <!--container-->
             <h2 style="text-align:center;"><b>Projetos</b></h2>
             <hr style="border:1px solid #ccc">
-            <div class="row"><!--row-->
+            <div class="row">
+                <!--row-->
                 <div class="col-md-4">
                     <img class="img-fluid displayed" src="imagens/ico-spotify.png" width="40%">
                     <p>
-                        Projeto clone do Spotify, realizado no curso Desenvolvimento Web Completo 2019 - 17 cursos + 20 projetos.
+                        Projeto clone do Spotify, realizado no curso Desenvolvimento Web Completo 2019 - 17 cursos + 20
+                        projetos.
                     </p>
-                    <a href="proj/spotify/clone-spotify.html" class="btn btn-outline-secondary btn-block" target="_blank">VISUALIZAR</a>
+                    <a href="proj/spotify/clone-spotify.html" class="btn btn-outline-secondary btn-block"
+                        target="_blank">VISUALIZAR</a>
                 </div>
-                
+
                 <div class="col-md-4">
-                     <img class="img-fluid displayed" src="imagens/logo-noticia-cidade.png" width="50%">
+                    <img class="img-fluid displayed" src="imagens/logo-noticia-cidade.png" width="50%">
                     <p>
-                        Projeto Noticia Cidade, realizado no curso Desenvolvimento Web. 
+                        Projeto Noticia Cidade, realizado no curso Desenvolvimento Web.
                     </p>
-                    <a href="proj/noticias-cidade/noticia-cidade.html" class="btn btn-outline-secondary btn-block" target="_blank">VISUALIZAR</a>
+                    <a href="proj/noticias-cidade/noticia-cidade.html" class="btn btn-outline-secondary btn-block"
+                        target="_blank">VISUALIZAR</a>
                 </div>
-                
+
                 <div class="col-md-4">
                     <img class="img-fluid displayed" src="imagens/logo-museu-nacional.png" width="50%">
                     <p>
                         Projeto Museu Nacional, realizado no curso Desenvolvimento Web.
                     </p>
-                    <a href="proj/museu-nacional/museu-nacional.html" class="btn btn-outline-secondary btn-block" target="_blank">VISUALIZAR</a>
+                    <a href="proj/museu-nacional/museu-nacional.html" class="btn btn-outline-secondary btn-block"
+                        target="_blank">VISUALIZAR</a>
                 </div>
-            </div><!--/row-->
+            </div>
+            <!--/row-->
 
-            <div class="row"><!--row-->
+            <div class="row">
+                <!--row-->
                 <div class="col-md-4">
                     <img class="img-fluid displayed" src="imagens/logo-finans.png" width="50%">
                     <p>
                         Projeto Finans, realizado no curso Desenvolvimento Web.
                     </p>
-                    <a href="proj/finans/finans.html" class="btn btn-outline-secondary btn-block" target="_blank">VISUALIZAR</a>
+                    <a href="proj/finans/finans.html" class="btn btn-outline-secondary btn-block"
+                        target="_blank">VISUALIZAR</a>
                 </div>
-                
+
                 <div class="col-md-4">
-                     <img class="img-fluid displayed" src="imagens/logo-chale-hotel.png" width="50%">
+                    <img class="img-fluid displayed" src="imagens/logo-chale-hotel.png" width="50%">
                     <p>
                         Projeto Chalé Hotel, realizado no curso Desenvolvimento Web.
                     </p>
-                    <a href="proj/chale-hotel/chale-hotel.html" class="btn btn-outline-secondary btn-block" target="_blank">VISUALIZAR</a>
+                    <a href="proj/chale-hotel/chale-hotel.html" class="btn btn-outline-secondary btn-block"
+                        target="_blank">VISUALIZAR</a>
                 </div>
-                
+
                 <div class="col-md-4">
                     <img class="img-fluid displayed" src="imagens/logo-udemy.png" width="50%">
                     <p>
                         Projeto TecBlog, realizado no curso Desenvolvimento Web.
                     </p>
-                    <a href="proj/tecblog/tecblog.html" class="btn btn-outline-secondary btn-block" target="_blank">VISUALIZAR</a>
+                    <a href="proj/tecblog/tecblog.html" class="btn btn-outline-secondary btn-block"
+                        target="_blank">VISUALIZAR</a>
                 </div>
-            </div><!--/row-->
+            </div>
+            <!--/row-->
 
-            <div class="row"><!--row-->
+            <div class="row">
+                <!--row-->
                 <div class="col-md-4">
                     <img class="img-fluid displayed" src="imagens/logo-udemy.png" width="50%">
                     <p>
                         Projeto Calculadora, realizado no curso Desenvolvimento Web utilizando a tecnologia JavaScript.
                     </p>
-                    <a href="proj/calc/calculadora.html" class="btn btn-outline-secondary btn-block" target="_blank">VISUALIZAR</a>
+                    <a href="proj/calc/calculadora.html" class="btn btn-outline-secondary btn-block"
+                        target="_blank">VISUALIZAR</a>
                 </div>
-                
+
                 <div class="col-md-4">
-                     <img class="img-fluid displayed" src="imagens/mosquito.png" width="20%">
+                    <img class="img-fluid displayed" src="imagens/mosquito.png" width="20%">
                     <p>
-                        Projeto app mata moquito, realizado no curso Desenvolvimento Web utilizando a tecnologia JavaScript.
+                        Projeto app mata moquito, realizado no curso Desenvolvimento Web utilizando a tecnologia
+                        JavaScript.
                     </p>
-                    <a href="proj/mata-mosquito/mata-mosquito.html" class="btn btn-outline-secondary btn-block" target="_blank">VISUALIZAR</a>
+                    <a href="proj/mata-mosquito/mata-mosquito.html" class="btn btn-outline-secondary btn-block"
+                        target="_blank">VISUALIZAR</a>
                 </div>
                 <!--
                 <div class="col-md-4">
@@ -289,8 +345,10 @@
                     </p>
                     <a href="proj/tecblog/tecblog.html" class="btn btn-outline-secondary btn-block" target="_blank">VISUALIZAR</a>
                 </div>
-            </div>--><!--/row-->
-        </div><!--/container-->
+            </div>-->
+                <!--/row-->
+            </div>
+            <!--/container-->
 
     </section><!-- fim secao projetos -->
 
@@ -302,14 +360,20 @@
                     <i class="fas fa-mobile-alt"><span> 51-985862294</span></i><br>
                     <i class="fas fa-at"><span> pauloricardo.godoy@yahoo.com.br</span></i><br>
                 </div>
-            
+
                 <div class="col-md-6">
                     <ul>
-                        <li><a class="btn btn-outline-light ml-3" href="https://www.facebook.com/paulo.godoy.948" target="_blank"><i class="fab fa-facebook fa-lg"></i></a></li>
-                        <li><a class="btn btn-outline-light ml-3" href="https://www.linkedin.com/in/paulo-ricardo-p-godoy-06577333" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
-                        <li><a class="btn btn-outline-light ml-3" href="https://www.instagram.com/paulogodoy948" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
-                        <li><a class="btn btn-outline-light ml-3" href="https://github.com/paulo-godoy?tab=repositories" target="_blank"><i class="fab fa-github-square fa-lg"></i></a></li>
-                        <li><a class="btn btn-outline-light ml-3" href="https://wa.me/5551985862294?" target="_blank" title="Me chame pelo WhatsApp."><i class="fab fa-whatsapp-square fa-lg"></i></a> </li>
+                        <li><a class="btn btn-outline-light ml-3" href="https://www.facebook.com/paulo.godoy.948"
+                                target="_blank"><i class="fab fa-facebook fa-lg"></i></a></li>
+                        <li><a class="btn btn-outline-light ml-3"
+                                href="https://www.linkedin.com/in/paulo-ricardo-p-godoy-06577333" target="_blank"><i
+                                    class="fab fa-linkedin fa-lg"></i></a></li>
+                        <li><a class="btn btn-outline-light ml-3" href="https://www.instagram.com/paulogodoy948"
+                                target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+                        <li><a class="btn btn-outline-light ml-3" href="https://github.com/paulo-godoy?tab=repositories"
+                                target="_blank"><i class="fab fa-github-square fa-lg"></i></a></li>
+                        <li><a class="btn btn-outline-light ml-3" href="https://wa.me/5551985862294?" target="_blank"
+                                title="Me chame pelo WhatsApp."><i class="fab fa-whatsapp-square fa-lg"></i></a> </li>
                     </ul>
                 </div>
             </div>
@@ -317,10 +381,17 @@
     </footer>
 
 
-<!-- JavaScript (Opcional) -->
-<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
